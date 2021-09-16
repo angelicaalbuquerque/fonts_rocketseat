@@ -111,12 +111,108 @@ Referências:
 
 ### Letter e word-spacing
 
+1. Letter spacing
+
+Define o espaçamento entre os caracteres, entre as letras.
+
+```CSS
+p {
+	letter-spacing: 4px;
+}
+```
+
+[Referência letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+
+2. Word spacing
+
+Define o espaçamento entre palavras.
+
+```CSS
+p {
+	word-spacing: 1em;
+}
+```
+
+[Referência word-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
+
 ### Line-height e text-transform
+
+1. Line height
+
+- Define os espaços entre linhas
+- Pode ser com unidades ou sem unidades de medida
+- Valores comuns: 1.5 ou 2
+
+```CSS
+p {
+	line-height: 1.5;
+}
+```
+
+[Referência line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+
+2. Text transform
+
+- Transformação do texto
+- Valores podem ser: none | capitalize | uppercase | lowercase | full-width | full-size-kana
+
+```CSS
+p {
+	text-transform: uppercase;
+}
+```
+
+[Referência text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
 
 ### Text-decoration
 
+- Aparência decorativa de um texto
+- line: underline | overline | line-through
+  - podemos aplicar mais de 1 valor
+- style: wavy | dotted | double | dashed | solid
+- color: <color> values
+
+```CSS
+h1 {
+	text-decoration: underline; /* shorthand */
+}
+
+p {
+  text-decoration: wavy overline blue; /* shorthand */
+}
+```
+
+A propriedade shorthand é `text-decoration`, mas são aceitos também `text-decoration-line`, `text-decoration-style` e `text-decoration-color`.
+
+[Referência](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+
 ### Text-align
+
+- Alinhamento de um texto
+- Valores: start | end | left | right | center | justify | match-parent
+
+[Referência](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
 
 ### Text-shadow
 
+- Sombra aplicada a um texto;
+- Permite múltiplos valores - os três primeiros são do tipo `lenght` (posicionamento - offset - e blur) e o último a coloração.
+
+```CSS
+p {
+  text-shadow: 1px 1px 1px red,
+	       2px 2px 1px green; /* offset-x | offset-y | blur-radius | color */
+}
+```
+
 ### Shorthand
+
+Podemos usar o _shorthand font_ para determinar os seguintes valores:
+
+- font-style, font-variant, font-weight, font-stretch, font-size, line-height e font-family
+
+```CSS
+p {
+  font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+}
+```
